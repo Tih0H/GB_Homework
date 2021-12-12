@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Lato',
+    sans-serif;
+}
+
+input button {
+    font-family: inherit;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    background: #222222;
+}
+
+.header_flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+}
+
+.header_logo_home{
+    margin-right: 40px
+}
+
+.header_logo_home, .header_logo_account, .header_logo_basket{
+    text-decoration: none;
+    color: transparent;
+}
+
+/* Убираем стандартный маркер Chrome */
+details summary::-webkit-details-marker {
+    display: none
+}
+
+/* Убираем стандартный маркер Firefox */
+details>summary {
+    list-style: none;
+}
+
+.header_logo_search {
+    background-color: transparent;
+    border: none;
+}
+
+.header_menue_burger {
+    display: inline-block;
+}
+
+
+.header_logo_account, .header_logo_basket{
+    margin-left: 30px;
+}
+
+.offer {
+    background: #F1E4E6;
+    margin-bottom: 65px;
+}
+.offer_background {
+    background: url(../images/HaedMan.png) left center no-repeat;
+    background-position-y: bottom;
+    height: 765px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.offer_title {
+    width: 370px;
+    border-left: 12px solid #F16D7F;
+    padding-left: 16px;
+    margin-right: 100px;
+}
+
+.offer_brand {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    color: #222222;
+
+}
+
+.offer_brand_smal {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 58px;
+    color: #222222;
+
+}
+
+.offer_brand_pink {
+    color: #F16D7F;
+}
+
+.categories {
+    margin-bottom: 90px;
+}
+
+.categories_people {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.categories_women {
+    width: 360px;
+    height: 260px;
+    background: url(../images/ForWomen.jpg) center no-repeat, #555555;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories_man {
+    width: 360px;
+    height: 260px;
+    background: url(../images/ForMem.jpg)center no-repeat, #555555;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories_kids {
+    width: 360px;
+    height: 260px;
+    background: url(../images/ForKids.jpg)center no-repeat, #555555;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories_accesories {
+    height: 180px;
+    background: url(../images/Accesories.jpg)center no-repeat, #555555;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories p{
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.categories h3 {
+    color: #F16D7F;
+    font-size: 24px;
+}
+
+.cards {
+    margin-bottom: 95px;
+}
+
+.cards_flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards_title {
+    font-size: 30px;
+    line-height: 36px;
+    color: #222222;
+    text-align: center;
+}
+
+.cards_subtitle {
+    font-size: 14px;
+    line-height: 17px;
+    color: #9F9F9F;
+    text-align: center;
+}
+
+.cards_product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+.cards_product a{
+    max-width: 360px;
+    text-decoration: none;
+    background: #F8F8F8;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.cards_product h4{
+    color: #000000;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 24px 18px 12px;
+}
+
+.cards_product_title {
+    width: 300px;
+    color: #5D5D5D;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0px 18px 18px;
+}
+
+.price {
+    font-size: 16px;
+    line-height: 19px;
+    color: #F16D7F;
+    margin-left: 18px;
+}
+
+.button_cataog {
+    width: 211px;
+    height: 47px;
+    border: 1px solid #FF6A6A;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #F26376;
+    background: white;
+}
+
+.benefits {
+    background: #222224;
+    color: #FBFBFB;
+}
+
+.benefits_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits_cards {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 103px auto;
+}
+
+.benefits_cards img {
+    margin-bottom: 20px;
+}
+
+.benefits_cards h3 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.benefits_cards p {
+    font-size: 13.972px;
+    line-height: 17px;
+    text-align: center;
+}
+
+/* ---------------------  footer  ------------------------ */
+
+.footer {
+    background: url(../images/Surfer.jpg) center no-repeat, #ffffff7d;
+    background-blend-mode: lighten;
+}
+
+.footer_subscrible {
+    height: 310px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 86px;
+}
+
+.footer_subscrible_info {
+    width: 360px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #222224;
+}
+
+.footer_subscrible_info img{
+    margin-bottom: 20px;
+}
+
+.footer_subscrible_form {
+    margin-top: 64px;
+    line-height: 167.2%;
+    text-align: center;
+    color: #222224;
+}
+
+.footer_subscrible_form h3{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.footer_subscrible_form p{
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.footer_subscrible_text {
+    background: #E1E1E1;
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222224;
+    padding-left: 22px;
+    border: none;
+}
+
+.footer_subscrible_button {
+    height: 50px;
+    width: 100px;
+    border-radius: 0 25px 25px 0;
+    background: #F16D7F;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.footer_subscrible_form form{
+    display: flex;
+}
+
+.footer_social {
+    background: #222224;
+    padding: 30px;
+}
+
+.footer_social_brand p {
+    font-size: 16px;
+    line-height: 19px;
+    color: #FBFBFB;
+}
+
+.footer_social_flex {
+    display: flex;
+    justify-content: space-between;
+}
