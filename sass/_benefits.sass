@@ -1,0 +1,51 @@
+.benefits
+    background: #222224
+    color: #FBFBFB
+
+    & img
+        transition: 0.6s
+
+    &:hover img
+        transform: scale(-1, 1)
+
+    &_flex
+        display: flex
+        justify-content: space-between
+
+    &_cards
+        width: 300px
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 103px auto
+
+    &_cards img
+        margin-bottom: 20px
+
+    &_cards h3
+        font-size: 20px
+        line-height: 24px
+        margin-bottom: 16px
+
+    &_cards p
+        font-size: 13.972px
+        line-height: 17px
+        text-align: center
+
+@media (max-width: 1199px)
+
+    .benefits
+        &_flex
+            flex-direction: column
+            align-items: center
+            padding-top: 20px
+            padding-bottom: 40px
+        &_cards
+            margin: 30px auto 6px
+
+@media (max-width: 767px)
+    .benefits
+        &_flex
+            padding-bottom: 60px
+        &_cards
+            margin: 30px auto 0px

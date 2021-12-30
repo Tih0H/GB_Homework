@@ -1,0 +1,121 @@
+.product
+
+    &_img
+        max-width: 1600px
+        // margin: 0 auto
+        padding: 0 25%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: #F7F7F7
+        border-top: 1px solid #EAEAEA
+        // border-bottom: 1px solid #EAEAEA
+        position: relative
+        // z-index: -1
+
+    &_gray
+        width: 47px
+        height: 47px
+        background: rgba(42, 42, 42, 0.15)
+        border: none
+        // z-index: 100
+        cursor: pointer
+
+    &_background
+        height: 55px
+        z-index: -1
+        background-color: #F7F7F7
+        border-bottom: 1px solid #EAEAEA
+
+    &_description
+        border-top: 1px solid #EAEAEA
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 40px
+        padding-bottom: 64px
+        position: relative
+        z-index: 1
+        margin-top: -43px
+        background: #FFFFFF
+
+        & ul
+            margin-bottom: 48px
+
+    &_categories
+        color: $main-color
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        margin-top: 64px
+        margin-bottom: 12px
+
+    &_title
+        font-weight: 300
+        font-size: 18px
+        line-height: 22px
+        color: #4D4D4D
+        margin: 12px auto 48px
+
+    &_subtitle
+        max-width: 555px
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        text-align: center
+
+    &_price
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+        color: #EF5B70
+        margin-top: 32px
+
+.pinc_line
+    height: 3px
+    width: 63px
+    background-color: #EF5B70
+    border: none
+
+.grey_line
+    width: 641px
+    border: 1px solid #EAEAEA
+    margin: 65px
+
+.button_catalog svg
+    position: absolute
+    left: 25px
+
+@media (max-width: 1199px)
+    .product
+        &_img
+            padding-top: 27px
+            padding-bottom: 70px
+        &_background
+            display: none
+        &_description
+            padding-bottom: 114px
+            & ul
+                margin-bottom: 37px
+    .grey_line
+        margin-bottom: 52px
+
+@media (max-width: 767px)
+    .product
+        &_img
+            padding-top: 84px
+            padding-bottom: 83px
+        &_description
+            margin-top: 0px
+            padding-bottom: 62px
+            & ul
+                margin-top: 12px
+                margin-bottom: 63px
+        &_title
+            margin-bottom: 33px
+        &_subtitle
+            max-width: 320px
+            line-height: 20px
+    .grey_line
+        width: 176px
+        margin: 36px auto
