@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<script>
+  "use strict";
+  const userNumber = +prompt ('Введите число.');
+  let one = prompt('Введите слово в склонении для единицы');
+  let two = prompt('Введите слово в склонении для двойки');
+  let five = prompt('Введите слово в склонении для пятерки');
+
+  function declinationOfNumber(){
+
+  let count = userNumber % 100;// выводим остаток деления на сто
+  let unit = count % 10;//узнаем какая была единица
+  if (unit == 1){
+    return one;
+  }
+  if (unit > 1 && unit < 5){
+    return two;
+  }
+  return five;
+  }
+  let answer = declinationOfNumber(userNumber, one, two, five);
+  alert(`У меня есть ${userNumber} ${answer}.`);
+
+</script>
+</body>
+</html>
