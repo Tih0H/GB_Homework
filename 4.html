@@ -6,38 +6,69 @@
 </head>
 <body>
 <!--
-Необязательное задание.
+Обязательное задание.
 
-Необходимо от пользователя получить число.
-Необходимо вывести разряды числа, а именно: количество сотен, десятков и единиц.
-
-Пример:
-Пользователь ввел число 163. Программа должна вывести:
-"В числе 163 количество сотен: 1, десятков: 6, единиц: 3"
-
-Пример 2:
-Пользователь ввел число 74. Программа должна вывести:
-"В числе 74 количество сотен: 0, десятков: 7, единиц: 4"
-
-Пример 3:
-Пользователь ввел число 9537. Программа должна вывести:
-"В числе 9537 количество сотен: 5, десятков: 3, единиц: 7"
-
-Уточнение: пользователь всегда вводит корректное положительное число.
+1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна
+фотография используя метод filter. Исходные данные - массив products.
+2. Необходимо отсортировать массив products используя метод sort по цене,
+начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести
+отсортированный массив в консоль.
 -->
 <script>
   "use strict";
-  let number = +prompt ('Введите трехзначное число');
-  let units = number % 10;
-  // console.log('units: ', units);
-  let dozens = Math.trunc(number / 10);
-  dozens = dozens % 10;
-  // console.log('dozens: ', dozens.toFixed(0) % 10);
-  let hundreds = Math.trunc(number / 100);
-  hundreds =  hundreds % 10;
 
-  // console.log('hundreds: ', hundreds.toFixed(0) % 10);
-  console.log(`В числе ${number} количество сотен: ${hundreds}, десятков: ${dozens}, единиц: ${units}`);
+  const products = [
+    {
+      id: 3,
+      price: 127,
+      photos: [
+        "1.jpg",
+        "2.jpg",
+      ],
+    },
+    {
+      id: 5,
+      price: 499,
+      photos: [],
+    },
+    {
+      id: 10,
+      price: 26,
+      photos: [
+        "3.jpg",
+      ],
+    },
+    {
+      id: 8,
+      price: 78,
+    },
+  ];
+//  let answer = products.filter(product => {
+//   "photos" in product && product.photos.length !== 0;
+//  })
+//  console.log(answer);
+  let answerFoto = products.filter(function(product) {
+    return "photos" in product && product.photos.length !== 0;
+  });
+  console.log(answerFoto);
+  // Здесь пишем решение, данный комментарий необходимо стереть.
+
+  products.sort(function (a, b) {
+  if (a.price > b.price) {
+    return 1;
+  }
+  if (a.price < b.price) {
+    return -1;
+  }
+
+  return 0;
+});
+
+console.log('products: ', products);
+
+
+
+
 
 </script>
 </body>
