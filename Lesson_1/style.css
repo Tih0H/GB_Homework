@@ -1,0 +1,56 @@
+
+body, h3, p {
+  margin: 0 ;
+  padding: 0;
+}
+
+
+.products {
+  display: flex;
+  gap: 20px;
+}
+
+header {
+  padding: 30px 40px 10px;
+}
+
+.btn-cart{
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: deepskyblue;
+  border-radius: 30px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.btn-cart:active {
+  background-color: dodgerblue;
+}
+
+main {
+  padding: 10px 40px;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+}
+
+img {
+  height: 80px;
+}
+
+.by-btn{
+  padding: 5px 10px;
+  font-size: 18px;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.by-btn:active {
+  background-color: darkblue;
+}
