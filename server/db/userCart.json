@@ -1,0 +1,27 @@
+{
+    "amount": 46600,
+    "countGoods": 4,
+    "contents": [
+        {
+            "quantity": 2,
+            "id_product": 1,
+            "product_name": "Jacket",
+            "price": 60,
+            "image": "images/Сard1.jpg"
+        },
+        {
+            "quantity": 2,
+            "id_product": 123,
+            "product_name": "Undershirt",
+            "price": 40,
+            "image": "images/Сard61.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 457,
+            "product_name": "Sweater",
+            "price": 52,
+            "image": "images/Сard3.jpg"
+        }
+    ]
+}
