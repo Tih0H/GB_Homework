@@ -30,10 +30,6 @@ const ControlPanel = () =>{
       inputRef.current?.focus();//было отключено
     }
   }
-// у препода было н хз зачем
-  // useEffect(() => {
-  //   inputRef.current?.focus();
-  // });
 
   useEffect(() => {
     if (messages?.length > 0 
