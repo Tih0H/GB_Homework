@@ -2,7 +2,7 @@
 // import App from './App';
 
 import { render } from "@testing-library/react";
-// import ListChats from "./components/ListChats";
+import ListChats from "./components/ListChats";
 import Home from "./pages/Home";
 import profileReducer from "./store/profile/reduser";
 import formatTimeStrings from "./utils/formatTime";
@@ -42,7 +42,7 @@ describe('snapshot test', () => {
 //   expect(mock).not.toBeCalled();
 // });
 
-test('should return the initial state', () => {
+test('Reduser profile test', () => {
   expect(profileReducer(undefined, {})).toEqual(
     {
       showName: false,
@@ -51,8 +51,7 @@ test('should return the initial state', () => {
   )
 }); 
 
-// Enzyme.configure({adapter: new Adapter()});
-// test('ListChats created', () => {
-//   const utils = shallow(<ListChats />);
-//   expect(utils).not.toBe('');
-// }); пока не работает
+test('ListChats created test', () => {
+  const utils = render(ListChats);
+  expect(utils).toBeDefined();
+}); 
