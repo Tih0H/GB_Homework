@@ -7,7 +7,7 @@
 
 $arrInts = [4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2];
 
-$result = array_map(function (int $arrInt) {
+$result1 = array_map(function (int $arrInt) {
     if ($arrInt%2 === 0){
         $arrInt = 'четное';
     } else{
@@ -18,5 +18,20 @@ $result = array_map(function (int $arrInt) {
 
 }, $arrInts);
 
-print_r($result);
+//print_r($result1);
+
+//Разработайте функцию с объявленными типами аргументов и возвращаемого значения,
+// принимающую в качестве аргумента массив целых чисел. Результатом работы функции должен быть массив,
+// содержащий три элемента: max — наибольшее число, min — наименьшее число,
+// avg — среднее арифметическое всех чисел массива;
+
+
+function arrayFunc($arr) {
+//    print_r(min($arr));
+//    print_r(max($arr));
+//    print_r(array_sum($arr));
+    $average = array_sum($arr) / count($arr);
+    echo "Минимальное значение:", min($arr), "\n Максимальное значение: ", max($arr),"\n Среднее арифметическое: ", $average;
+};
+arrayFunc($arrInts);
 ?>
