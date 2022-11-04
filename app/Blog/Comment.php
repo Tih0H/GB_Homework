@@ -2,26 +2,21 @@
 
 namespace Tihon\Lesson1\Blog;
 
-class Post
+class Comment
 {
-    private int $id;
-    private User $user;
-    private string $text;
-
     public function __construct(
-        int $id,
-        User $user,
-        string $text
+        private int $id,
+        private User $user,
+        private Post $post,
+        private string $text
     ) {
-        $this->id = $id;
-        $this->text = $text;
-        $this->user = $user;
+
     }
 
     /**
      * @return int
      */
-    public function id(): int
+    public function getId(): int
     {
         return $this->id;
     }
@@ -51,6 +46,22 @@ class Post
     }
 
     /**
+     * @return Post
+     */
+    public function getPost(): Post
+    {
+        return $this->post;
+    }
+
+    /**
+     * @param Post $post
+     */
+    public function setPost(Post $post): void
+    {
+        $this->post = $post;
+    }
+
+    /**
      * @return string
      */
     public function getText(): string
@@ -61,15 +72,12 @@ class Post
     /**
      * @param string $text
      */
-    public function setText(string $text): Post
+    public function setText(string $text): void
     {
         $this->text = $text;
-        return $this;
     }
 
-    public function __toString()
-    {
-        return $this->user . ' пишет: ' . $this->text . PHP_EOL;
+    public function __toString(){
+        return $this->user . " пишет Коммент " . $this->text;
     }
-
 }

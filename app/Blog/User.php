@@ -1,7 +1,7 @@
 <?php
 
-namespace app\Blog;
-use app\Person\Name;
+namespace Tihon\Lesson1\Blog;
+use Tihon\Lesson1\Person\Name;
 class User
 {
     private int $id;

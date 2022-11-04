@@ -4,7 +4,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Tihon\\Lesson1\\": "src/"
+            "Tihon\\Lesson1\\": "app/"
         }
     },
     "authors": [

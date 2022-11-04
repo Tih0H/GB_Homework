@@ -1,5 +1,5 @@
 <?php
-namespace app\Person;
+namespace Tihon\Lesson1\Person;
 use DateTimeImmutable;
 class Person
 {
