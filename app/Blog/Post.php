@@ -4,18 +4,53 @@ namespace Tihon\Lesson1\Blog;
 
 class Post
 {
-    private int $id;
+    private UUID $uuid;
     private User $user;
+    private string $title;
     private string $text;
 
     public function __construct(
-        int $id,
+        UUID $uuid,
         User $user,
-        string $text
+        string $title,
+        string $text,
     ) {
-        $this->id = $id;
-        $this->text = $text;
+        $this->uuid = $uuid;
         $this->user = $user;
+        $this->title = $title;
+        $this->text = $text;
+    }
+
+    /**
+     * @return UUID
+     */
+    public function getUuid(): UUID
+    {
+        return $this->uuid;
+    }
+
+    /**
+     * @param UUID $uuid
+     */
+    public function setUuid(UUID $uuid): void
+    {
+        $this->uuid = $uuid;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param string $title
+     */
+    public function setTitle(string $title): void
+    {
+        $this->title = $title;
     }
 
     /**

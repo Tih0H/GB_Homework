@@ -4,66 +4,58 @@ namespace Tihon\Lesson1\Blog;
 use Tihon\Lesson1\Person\Name;
 class User
 {
-    private int $id;
-    private Name $username;
-    private string $login;
+    private UUID $uuid;
+    private Name $name;
+    private string $username;
 
-    public function __construct(int $id, Name $username, string $login){
-        $this->id = $id;
-        $this->username = $username;
-        $this->login = $login;
+    public function __construct(UUID $uuid, Name $username, string $login){
+        $this->uuid = $uuid;
+        $this->name = $username;
+        $this->username = $login;
     }
     public function __toString(): string
     {
-        return "Юзер $this->id с именем $this->username и логином $this->login." . PHP_EOL;
+        return "Юзер $this->uuid с именем $this->name и логином $this->username." . PHP_EOL;
     }
 
     /**
-     * @return int
+     * @return UUID
      */
-    public function getId(): int
+    public function uuid(): UUID
     {
-        return $this->id;
-    }
-
-    /**
-     * @param int $id
-     */
-    public function setId(int $id): void
-    {
-        $this->id = $id;
+        return $this->uuid;
     }
 
     /**
      * @return Name
      */
-    public function getUsername(): Name
+    public function name(): Name
     {
-        return $this->username;
+        return $this->name;
     }
 
     /**
-     * @param Name $username
+     * @param Name $name
      */
-    public function setUsername(Name $username): void
+    public function setUsername(Name $name): void
     {
-        $this->username = $username;
+        $this->name = $name;
     }
 
     /**
      * @return string
      */
-    public function getLogin(): string
+    public function username(): string
     {
-        return $this->login;
+        return $this->username;
     }
 
     /**
-     * @param string $login
+     * @param string $username
      */
-    public function setLogin(string $login): void
+    public function setLogin(string $username): void
     {
-        $this->login = $login;
+        $this->username = $username;
     }
 
 }
