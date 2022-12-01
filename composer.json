@@ -1,28 +1,25 @@
 {
-    "name": "tihon/lesson1",
-    "description": "study",
-    "type": "project",
+    "name": "devavi/leveltwo",
     "autoload": {
         "psr-4": {
-            "Tihon\\Lesson1\\": "app/"
+            "devavi\\leveltwo\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "me"
+            "name": "devavi"
         }
     ],
     "require": {
         "fakerphp/faker": "^1.20",
-      "ext-pdo": "*",
         "symfony/polyfill-uuid": "^1.26",
-      "ext-mbstring": "*"
+        "psr/container": "^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
-        "roave/security-advisories": "dev-latest"
+        "phpunit/phpunit": "^9.5"
     },
     "scripts": {
         "test": "phpunit tests --testdox --colors"
-    }
+        }
+        
 }
