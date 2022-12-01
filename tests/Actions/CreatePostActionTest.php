@@ -2,26 +2,28 @@
 
 namespace Actions;
 
-use Tihon\Lesson1\Http\ErrorResponse;
-use Tihon\Lesson1\Blog\Exception\JsonException;
-use Tihon\Lesson1\Http\Actions\Posts\CreatePost;
-use Tihon\Lesson1\http\Request;
-use Tihon\Lesson1\http\SuccessfulResponse;
-use Tihon\Lesson1\Person\Name;
-use Tihon\Lesson1\Blog\Repositories\UsersRepository\UsersRepositoryInterface;
-use Tihon\Lesson1\Blog\User;
-use Tihon\Lesson1\Blog\Exception\UserNotFoundException;
-use Tihon\Lesson1\Blog\Post;
-use Tihon\Lesson1\Blog\Repositories\PostsRepository\PostsRepositoryInterface;
-use Tihon\Lesson1\Blog\UUID;
-use Tihon\Lesson1\Blog\Exception\PostNotFoundException;
+
+use devavi\leveltwo\Http\ErrorResponse;
+use devavi\leveltwo\Blog\Exceptions\JsonException;
+use devavi\leveltwo\Http\Actions\Posts\CreatePost;
+use devavi\leveltwo\http\Request;
+use devavi\leveltwo\http\SuccessfulResponse;
+use devavi\leveltwo\Person\Name;
+use devavi\leveltwo\Blog\Repositories\UsersRepository\UsersRepositoryInterface;
+use devavi\leveltwo\Blog\User;
+use devavi\leveltwo\Blog\Exceptions\UserNotFoundException;
+use devavi\leveltwo\Blog\Post;
+use devavi\leveltwo\Blog\Repositories\PostsRepository\PostsRepositoryInterface;
+use devavi\leveltwo\Blog\UUID;
+use devavi\leveltwo\Blog\Exceptions\PostNotFoundException;
 use PHPUnit\Framework\TestCase;
 
 class CreatePostActionTest extends TestCase
 {
     private function postsRepository(): PostsRepositoryInterface
     {
-        return new class() implements PostsRepositoryInterface {
+        return new class() implements PostsRepositoryInterface
+        {
             private bool $called = false;
 
             public function __construct()
@@ -59,8 +61,7 @@ class CreatePostActionTest extends TestCase
         {
             public function __construct(
                 private array $users
-            )
-            {
+            ) {
             }
 
             public function save(User $user): void
@@ -103,13 +104,13 @@ class CreatePostActionTest extends TestCase
             ),
         ]);
 
-        $action = new CreatePost($postsRepository,$usersRepository);
+        $action = new CreatePost($postsRepository, $usersRepository);
 
         $response = $action->handle($request);
 
         $this->assertInstanceOf(SuccessfulResponse::class, $response);
 
-        $this->setOutputCallback(function ($data){
+        $this->setOutputCallback(function ($data) {
             $dataDecode = json_decode(
                 $data,
                 associative: true,
@@ -140,7 +141,7 @@ class CreatePostActionTest extends TestCase
         $postsRepository = $this->postsRepository();
         $usersRepository = $this->usersRepository([]);
 
-        $action = new CreatePost($postsRepository,$usersRepository);
+        $action = new CreatePost($postsRepository, $usersRepository);
 
         $response = $action->handle($request);
 
@@ -163,11 +164,12 @@ class CreatePostActionTest extends TestCase
         $usersRepository = $this->usersRepository([
             new User(
                 new UUID('10373537-0805-4d7a-830e-22b481b4859c'),
-                new Name('Ivan', 'Nikitin'), 'ivan',
+                new Name('Ivan', 'Nikitin'),
+                'ivan',
             ),
         ]);
 
-        $action = new CreatePost($postsRepository,$usersRepository);
+        $action = new CreatePost($postsRepository, $usersRepository);
 
         $response = $action->handle($request);
 
