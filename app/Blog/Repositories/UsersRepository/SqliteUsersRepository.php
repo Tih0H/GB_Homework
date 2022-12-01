@@ -2,6 +2,8 @@
 
 namespace Tihon\Lesson1\Blog\Repositories\UsersRepository;
 
+use Tihon\Lesson1\Blog\Commands\Arguments;
+use Tihon\Lesson1\Blog\Commands\CreateUserCommand;
 use Tihon\Lesson1\Blog\Exception\InvalidArgumentException;
 use Tihon\Lesson1\Blog\Exception\UserNotFoundException;
 use Tihon\Lesson1\Blog\User;
@@ -86,4 +88,6 @@ class SqliteUsersRepository implements UsersRepositoryInterface
             $result['username']
         );
     }
+
+
 }

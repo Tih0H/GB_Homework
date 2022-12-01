@@ -4,6 +4,7 @@ namespace Tihon\Lesson1\Blog\Repositories\PostsRepository;
 
 use Tihon\Lesson1\Blog\Exception\InvalidArgumentException;
 use Tihon\Lesson1\Blog\Exception\PostNotFoundException;
+use Tihon\Lesson1\Blog\Exception\UserNotFoundException;
 use Tihon\Lesson1\Blog\Post;
 use Tihon\Lesson1\Blog\Repositories\UsersRepository\SqliteUsersRepository;
 use Tihon\Lesson1\Blog\UUID;
@@ -47,6 +48,7 @@ class SqlitePostsRepository implements PostsRepositoryInterface
     /**
      * @throws PostNotFoundException
      * @throws InvalidArgumentException
+     * @throws UserNotFoundException
      */
     private function getPost(\PDOStatement $statement, string $postUuid): Post
     {
@@ -66,4 +68,5 @@ class SqlitePostsRepository implements PostsRepositoryInterface
             $result['text']
         );
     }
+
 }

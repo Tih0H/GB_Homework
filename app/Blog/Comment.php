@@ -2,82 +2,44 @@
 
 namespace Tihon\Lesson1\Blog;
 
-class Comment
-{
-    public function __construct(
-        private int $id,
-        private User $user,
-        private Post $post,
-        private string $text
-    ) {
+class Comment {
 
-    }
+    private UUID $uuid;
+    private User $user;
+    private Post $post;
+    private string $text;
 
-    /**
-     * @return int
-     */
-    public function getId(): int
+    public function __construct(UUID $uuid, User $user, Post $post, string $text)
     {
-        return $this->id;
-    }
-
-    /**
-     * @param int $id
-     */
-    public function setId(int $id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return User
-     */
-    public function getUser(): User
-    {
-        return $this->user;
-    }
-
-    /**
-     * @param User $user
-     */
-    public function setUser(User $user): void
-    {
+        $this->uuid = $uuid;
         $this->user = $user;
+        $this->post = $post;
+        $this->text = $text;
     }
 
-    /**
-     * @return Post
-     */
-    public function getPost(): Post
+    public function __toString(): string
+    {
+        return "Юзер $this->author_uuid написал коментарий к посту номер $this->post_uuid с номером $this->uuid и текстом: $this->text" . PHP_EOL;
+    }
+
+    public function uuid(): UUID
+    {
+        return $this->uuid;
+    }
+
+    public function post(): Post
     {
         return $this->post;
     }
 
-    /**
-     * @param Post $post
-     */
-    public function setPost(Post $post): void
+    public function user(): User
     {
-        $this->post = $post;
+        return $this->user;
     }
 
-    /**
-     * @return string
-     */
-    public function getText(): string
+    public function text(): string
     {
         return $this->text;
     }
 
-    /**
-     * @param string $text
-     */
-    public function setText(string $text): void
-    {
-        $this->text = $text;
-    }
-
-    public function __toString(){
-        return $this->user . " пишет Коммент " . $this->text;
-    }
 }
