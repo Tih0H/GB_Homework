@@ -1,0 +1,28 @@
+{
+    "name": "tihon/lesson1",
+    "description": "study",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Tihon\\Lesson1\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "me"
+        }
+    ],
+    "require": {
+        "fakerphp/faker": "^1.20",
+      "ext-pdo": "*",
+        "symfony/polyfill-uuid": "^1.26",
+      "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-latest"
+    },
+    "scripts": {
+        "test": "phpunit tests --testdox --colors"
+    }
+}
