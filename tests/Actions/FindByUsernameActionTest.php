@@ -2,15 +2,15 @@
 
 namespace Actions;
 
-use Tihon\Lesson1\Blog\Exception\UserNotFoundException;
-use Tihon\Lesson1\Blog\Repositories\UsersRepository\UsersRepositoryInterface;
-use Tihon\Lesson1\Blog\User;
-use Tihon\Lesson1\Blog\UUID;
-use Tihon\Lesson1\http\Actions\Users\FindByUsername;
-use Tihon\Lesson1\http\ErrorResponse;
-use Tihon\Lesson1\http\Request;
-use Tihon\Lesson1\http\SuccessfulResponse;
-use Tihon\Lesson1\Person\Name;
+use devavi\leveltwo\Blog\Exceptions\UserNotFoundException;
+use devavi\leveltwo\Blog\Repositories\UsersRepository\UsersRepositoryInterface;
+use devavi\leveltwo\Blog\User;
+use devavi\leveltwo\Blog\UUID;
+use devavi\leveltwo\http\Actions\Users\FindByUsername;
+use devavi\leveltwo\http\ErrorResponse;
+use devavi\leveltwo\http\Request;
+use devavi\leveltwo\http\SuccessfulResponse;
+use devavi\leveltwo\Person\Name;
 use PHPUnit\Framework\TestCase;
 
 class FindByUsernameActionTest extends TestCase
