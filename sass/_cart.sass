@@ -1,0 +1,257 @@
+.cart
+    &_flex
+        display: flex
+        justify-content: space-between
+        padding: 69px 0 128px
+
+    &_products
+
+        &_card
+            margin-bottom: 40px
+            display: flex
+            gap: 30px
+            box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
+
+            &_img
+                width: 262px
+                height: 306px
+
+        &_form
+            display: flex
+            justify-content: space-between
+
+            &_btn
+                width: 234px
+                height: 49px
+                border: 1px solid #A4A4A4
+                background-color: white
+                color: #A4A4A4
+                font-weight: 300
+                font-size: 14px
+                line-height: 17px
+                cursor: pointer
+                transition: 0.2s
+                &:hover
+                    background-color: #A4A4A4
+                    color: white
+                    border-color: $main-color
+    &_form
+        display: flex
+        flex-direction: column
+        width: 358px
+        margin-top: 10px
+
+        &_flex
+            display: flex
+            flex-direction: column
+
+        &_title
+            font-style: normal
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+            color: $text-color
+            margin-bottom: 20px
+
+        &_text
+            margin-bottom: 21px
+            border: 1px solid #A4A4A4
+            height: 45px
+            padding-left: 17px
+
+        &_get
+            border: 1px solid #A4A4A4
+            width: 100px
+            height: 34px
+            font-weight: 300
+            font-size: 11px
+            line-height: 13px
+            color: #4A4A4A
+            background-color: #fff
+            cursor: pointer
+            transition: 0.3s
+            &:hover
+                color: white
+                background-color: #4A4A4A
+                border-color: $main-color
+
+        &_sub
+            width: 273px
+            height: 60px
+            background-color: $main-color
+            color: white
+            border: none
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+            margin: 0 auto
+            cursor: pointer
+            transition: 0.3s
+            &:hover
+                color: $main-color
+                background-color: white
+                border: 1px solid $main-color
+
+    &_amount
+        margin-top: 57px
+        background: #F5F3F3
+        width: 326px
+        height: 180px
+        display: flex
+        flex-direction: column
+        align-items: end
+        padding: 34px
+
+        &_title
+            font-size: 11px
+            line-height: 13px
+            color: #4A4A4A
+            margin: 5px 0 13px
+
+        & span
+            margin-left: 20px
+
+        &_subtitle
+            font-weight: 300
+            font-size: 16px
+            line-height: 19px
+            color: $text-color
+
+        &_grand
+            font-weight: 700
+
+        & hr
+            margin: 21px auto 17px
+            width: 310px
+            background-color: #E2E2E2
+            border: none
+            height: 1px
+
+.card
+    &_description
+        padding: 22px
+
+    &_title
+        display: flex
+        justify-content: space-between
+        margin-bottom: 42px
+        & svg
+            fill: $text-color
+            width: 13px
+            height: 13px
+            margin-top: 10px
+            cursor: pointer
+            transition: 0.2s
+            &:hover
+                fill: $main-color
+
+    &_subtitle
+        &_main_item
+            width: 262px
+
+        &_item
+            font-size: 22px
+            line-height: 26px
+            color: #575757
+
+    &_quantity
+        display: flex
+        justify-content: start
+        text-align: center
+
+        &_in
+            margin-left: 24px
+            width: 34px
+            text-align: center
+            font-size: 22px
+            line-height: 26px
+            color: #575757
+
+    // убираем стрелочки у "поля число"
+.card_quantity_in
+    -moz-appearance: textfield
+
+.card_quantity_in::-webkit-inner-spin-button
+    display: none
+
+@media (max-width: 1023px)
+    .cart
+        &_flex
+            padding-top: 58px
+            flex-direction: column
+        &_form
+            flex-direction: row
+            justify-content: space-between
+            width: auto
+            margin-top: 40px
+            &_flex
+                min-width: 360px
+        &_products_form
+            padding: 23px 89px
+            justify-content: space-around
+        &_amount
+            margin-top: 40px
+            padding: 33px 18px 0px
+    .card
+        &_description
+            padding: 22px 0px
+            width: 416px
+        &_subtitle_item
+            margin-bottom: 6px
+        &_title svg
+            width: 19px
+            height: 19px
+
+@media (max-width: 767px)
+    .cart
+        &_flex
+            padding-top: 39px
+            padding-bottom: 94px
+        &_products
+            &_form
+                padding: 0px 0px
+                &_btn
+                    width: 159px
+                    height: 32px
+                    font-size: 9px
+                    line-height: 14px
+            &_card
+                gap: 16px
+                margin-bottom: 31px
+                &_img
+                    width: auto
+                    height: 188px
+        &_form
+            margin-top: 50px
+            flex-direction: column
+            &_flex
+                min-width: 346px
+            &_text
+                height: 43px
+        &_amount
+            margin-top: 51px
+            padding: 33px 29px 0px
+            width: auto
+    .card
+        &_description
+            padding: 14px 0px
+        &_subtitle
+            &_main_item
+                width: 130px
+                font-size: 16px
+                line-height: 19px
+            &_item
+                font-size: 14px
+                line-height: 14px
+        &_title
+            margin-bottom: 23px
+            margin-right: 9px
+            & svg
+                width: 12px
+                height: 12px
+                margin-top: 1px
+        &_quantity_in
+            margin-left: 29px
+            width: 20px
+            font-size: 10px
+            line-height: 12px

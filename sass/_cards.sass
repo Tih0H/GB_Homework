@@ -1,0 +1,356 @@
+.cards
+    margin-bottom: 95px
+
+    &_flex
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &_title
+        font-size: 30px
+        line-height: 36px
+        color: $text-color
+        text-align: center
+
+    &_subtitle
+        font-size: 14px
+        line-height: 17px
+        color: #9F9F9F
+        text-align: center
+
+    &_filter
+        width: 100%
+        display: flex
+        justify-content: start
+        gap: 60px
+        padding-top: 51px
+
+        &_menue
+            width: 360px
+            box-sizing: border-box
+            position: relative
+            // outline: none
+            // border: none
+            &[open]
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+            &[open]>summary
+                color: $main-color
+                background: white
+                padding-left: 16px
+                padding-top: 13px
+
+                & svg
+                    fill: $main-color
+
+        &_title
+            font-weight: 600
+            font-size: 14px
+            line-height: 17px
+            cursor: pointer
+            transition: 0.2s
+
+            &:hover
+                color: $main-color
+
+            &:hover svg
+                fill: $main-color
+
+            & svg
+                fill: black
+                margin-left: 10px
+                padding-right: 15px
+                width: 15px
+                height: 10px
+                transition: 0.2s
+
+            &_border
+                border-left: 5px solid $main-color
+                border-bottom: 1px solid #EBEBEB
+                height: 37px
+                margin-top: 18px
+                height: 27px
+                padding-top: 9px
+                width: 327px
+                padding-left: 10px
+
+        &_content
+            position: absolute
+            z-index: 10
+            width: 344px
+            height: 531px
+            padding-left: 16px
+            background: white
+            box-shadow: 6px 36px 35px rgba(0, 0, 0, 0.21)
+
+        &-link
+            font-size: 14px
+            line-height: 17px
+            color: #6F6E6E
+
+        &_item
+            margin: 11px
+
+    &_filter_list
+        display: flex
+        align-items: center
+        list-style: none
+
+    &_filter_sort
+        font-weight: 400
+        font-size: 14px
+        line-height: 19px
+        color: #6f6e6e
+        margin-right: 25px
+        cursor: pointer
+        transition: 0.2s
+
+        &:hover
+            text-decoration: underline
+            color: #F16D7F
+
+        &_menue
+            box-sizing: border-box
+            position: relative
+        &_list
+            position: absolute
+            background-color: white
+            z-index: 10
+            width: 79px
+            height: 103px
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+
+            & li
+                padding-left: 9px
+        &_text
+            font-size: 14px
+            line-height: 16px
+            color: #6F6E6E
+            margin: 7px 6px 1px 9px
+            display: inline-block
+
+    &_filter_sort::after
+        content: ""
+        background: url(../images/Vector_dvn.svg) center no-repeat
+        padding-right: 25px
+
+    &_overlay
+        height: 420px
+        max-width: 360px
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        background-color: rgba(58, 56, 56, 0.83)
+        display: flex
+        justify-content: center
+        align-items: center
+        opacity: 0
+        transition: 0.5s
+
+        // & svg
+            // position: absolute
+
+        & path
+            fill: #fff
+
+    &_btn
+        width: 138px
+        height: 43px
+        border: 1px solid white
+        color: white
+        text-align: center
+        cursor: pointer
+        // position: relative
+        background-color: transparent
+        display: flex
+        justify-content: space-around
+        align-items: center
+        font-size: 14px
+        line-height: 17px
+
+    &_product
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-top: 48px
+        gap: 30px
+        position: relative
+
+        &_src
+            max-width: 360px
+            background: #F8F8F8
+            margin-bottom: 30px
+            padding-bottom: 20px
+            position: relative
+
+            &:hover .cards_overlay
+                opacity: 1
+
+        & h4
+            color: #000000
+            font-size: 13px
+            line-height: 16px
+            margin: 24px 18px 12px
+
+        &_title
+            width: 300px
+            color: #5D5D5D
+            font-size: 14px
+            line-height: 17px
+            margin: 0px 18px 18px
+
+.price
+    font-size: 16px
+    line-height: 19px
+    color: $main-color
+    margin-left: 18px
+
+.button_catalog
+    width: 211px
+    height: 47px
+    border: 1px solid $main-color
+    font-size: 16px
+    line-height: 19px
+    text-align: center
+    color: $main-color
+    background: white
+    cursor: pointer
+    position: relative
+    transition: 0.5s
+
+    & path
+        fill: #EF5B70
+        transition: 0.5s
+
+    &:hover
+        color: white
+        background: $main-color
+
+        & path
+            fill: white
+
+.swap
+    width: 284px
+    height: 44px
+    border: 1px solid #EBEBEB
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 18px
+
+    &er
+        &_left
+            margin-right: 17px
+            transition: 0.2s
+            & svg
+                fill: black
+                &:hover
+                    fill: $main-color
+        &_right
+            margin-left: 16px
+            transition: 0.2s
+            & svg
+                fill: black
+                &:hover
+                    fill: $main-color
+
+    &_link, .swap_ellipsis
+        color: #C4C1C1
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        margin: 0 7px
+
+    &_link:nth-child(7)
+        margin: 0 1px 0 6px
+
+    &_link:nth-child(9)
+        margin: 0 6px 0 1px
+
+    &_ellipsis
+        display: inline-block
+        margin: 0
+        cursor: pointer
+
+.color_pink
+    color: #EF5B70
+
+/* Убираем стандартный маркер Chrome */
+details summary::-webkit-details-marker
+    display: none
+
+/* Убираем стандартный маркер Firefox */
+details > summary
+    list-style: none
+
+@media (max-width: 1199px)
+    .cards
+        margin-bottom: 65px
+        &_subtitle
+            margin-bottom: 35px
+        &_product
+            justify-content: center
+            flex-direction: row-reverse
+            margin-top: 40px
+            margin-bottom: 32px
+            gap: 15px
+            &_src
+                margin-bottom: 0px
+                padding-bottom: 20px
+                & a
+                    display: inline-block
+                    height: 420px
+
+                &:hover .cards_overlay
+                    opacity: 0
+                    display: none
+            &_melt
+                display: none
+            &_magic3
+                display: none
+        &_filter
+            padding-top: 24px
+            gap: 0
+            justify-content: space-between
+            &_sort
+                line-height: 16px
+                margin-right: 0px
+                margin-left: 26px
+                &::after
+                    padding-right: 20px
+
+@media (max-width: 767px)
+
+    .cards
+        margin-bottom: 96px
+        &_subtitle
+            margin-bottom: 41px
+        &_filter
+            &_melt
+                display: none
+            &_title svg
+                margin-left: -7px
+                width: 37px
+                height: 27px
+            &_menue
+                width: 50px
+            &_list
+                margin-top: -8px
+            &_sort
+                line-height: 14px
+                font-size: 12px
+            &_mini
+                font-size: 10px
+        &_product
+            margin-top: 27px
+            margin-bottom: 41px
+            &_magic3
+                display: block
+            &_magic2
+                display: none
+            & h4
+                margin-top: 21px
+    .swap
+        margin-top: 0px
+        margin-bottom: -34px

@@ -1,0 +1,82 @@
+.header
+    background: $text-color
+
+    &_flex
+        display: flex
+        justify-content: space-between
+        padding: 18px
+
+    &_logo_home
+        margin-right: 40px
+
+        &, .header_logo_account, .header_logo_basket
+            text-decoration: none
+            color: transparent
+
+    &_logo_basket
+        position: relative
+
+    &_logo_search
+        background-color: transparent
+        border: none
+
+    &_menue_burger
+        display: inline-block
+        position: relative
+
+    &_menue_content
+        position: absolute
+        background-color: white
+        width: 232px
+        left: 0
+        padding-left: 10px
+        padding-bottom: 50%
+        top: calc(100% + 30px)
+
+    &_menue_title
+        font-size: 14px
+        line-height: 17px
+        font-weight: bold
+        color: #000000
+        margin: 37px 24px 34px
+
+    &_menue_category
+        font-size: 14px
+        line-height: 17px
+        color: $main-color
+        margin-left: 33px
+        margin-bottom: 10px
+
+    &_menue_subtitle
+        text-decoration: none
+        list-style: none
+        margin: 12px 20px 20px 55px
+
+    &_menue_link,
+    &_menue_item
+        font-size: 14px
+        line-height: 17px
+        color: #6F6E6E
+        margin: 11px
+
+/* Убираем стандартный маркер Chrome */
+details summary::-webkit-details-marker
+    display: none
+
+/* Убираем стандартный маркер Firefox */
+details>summary 
+    list-style: none
+
+.header_logo_account, .header_logo_basket
+    margin-left: 30px
+
+.interval
+    width: 19px
+    height: 19px
+    border-radius: 50%
+    background-color: $main-color
+    color: #ffffff
+    position: absolute
+    left: 28px
+    top: -20px
+    text-align: center

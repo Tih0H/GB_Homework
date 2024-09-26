@@ -1,0 +1,156 @@
+.header
+    background: #222222
+
+    &_flex
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+        padding: 18px 30px
+
+    &_logo_home
+        margin-right: 40px
+
+    &_logo_home, .header_logo_home .header_logo_account, .header_logo_home .header_logo_basket
+        text-decoration: none
+        color: transparent
+
+    &_logo_basket
+        position: relative
+
+    &_logo_search
+        background-color: transparent
+        border: none
+        cursor: pointer
+        & svg
+            fill: #E8E8E8
+            transition: 0.2s
+            &:hover
+                fill: $main-color
+
+    &_logo_account, .header_logo_basket
+        margin-left: 33px
+    &_logo_account svg, .header_logo_basket svg
+        fill: #E8E8E8
+        transition: 0.2s
+        &:hover
+            fill: $main-color
+
+    &_menue
+        display: flex
+        margin-top: 5px
+        &_close
+            margin-left: 203px
+            margin-top: 16px
+            margin-bottom: -20px
+            cursor: pointer
+        &_category
+            font-size: 14px
+            line-height: 17px
+            cursor: pointer
+            margin-top: 22px
+            margin: 22px 33px auto
+        &_item
+            font-size: 14px
+            line-height: 17px
+            margin: 11px 54px
+            & a
+                color: #6F6E6E
+        &_burger
+            position: relative
+            margin-top: 6px
+            & svg
+                fill: #E8E8E8
+                transition: 0.2s
+                &:hover
+                    fill: $main-color
+            &_content
+                position: absolute
+                width: 232px
+                height: 764px
+                background: #FFFFFF
+                left: 300%
+                top: 60px
+                transform-origin: right top //close
+                transform: scale(0)
+                transition-property: transform
+                transition-delay: 0.9s
+                transition-duration: 0.1s
+                // &:nth-child(2)
+                //     margin-top: 5px
+
+        &_subtitle
+            // transform: scale(0)
+            // display: none
+            transform-origin: left center
+            transition-property: transform
+            transition-delay: 0.3s
+            transition-duration: 2s
+
+    &_menue_burger:hover .header_menue_burger_content,
+    &_menue_burger:focus-within .header_menue_burger_content,
+    &_menue_burger:focus + .header_menue_burger_content
+        transform: scale(1)
+        transition-delay: 0.2s
+        transition-duration: 0.2s
+        transform-origin: left top
+        z-index: 100
+
+    // &_menue_category:hover .header_menue_subtitle,
+    // &_menue_category:focus-within .header_menue_subtitle,
+    // &_menue_category:focus + .header_menue_subtitle
+    //     // transform: scale(1)
+    //     display: block
+    //     transition-delay: 0.3s
+    //     transition-duration: 0.2s
+    //     transform-origin: left center
+
+// /* Убираем стандартный маркер Chrome */
+// details summary::-webkit-details-marker
+//     display: none
+
+// /* Убираем стандартный маркер Firefox */
+// details > summary
+//     list-style: none
+
+.interval
+    width: 19px
+    height: 19px
+    border-radius: 50%
+    background-color: #F16D7F
+    color: #ffffff
+    position: absolute
+    left: 28px
+    top: -20px
+    text-align: center
+
+@media (max-width: 1500px)
+    .header_menue_burger_content
+        left: 0
+
+@media (max-width: 1299px)
+    .header_menue_burger_content
+        left: -60px
+
+// @media (max-width: 1199px)
+@media (max-width: 1023px)
+    .header
+        &_flex
+            padding: 16px 14px
+        &_menue
+            margin-top: 10px
+            margin-right: 12px
+
+@media (max-width: 767px)
+    .header
+        &_flex
+            padding: 16px 0px
+        &_logo_account,
+        &_logo_basket
+            display: none
+        &_menue
+            margin-right: 0
+            &_burger_content
+                left: -190px
